@@ -307,7 +307,8 @@ function main()
 					sampAddChatMessage(u8:decode" [Larek] Время успешно откалибровано", main_color)
 				elseif dialogLine[list + 1] == u8:decode'> Статистика\t'  then
 					ShowDialog(19)
-				elseif dialogLine[list + 1] == u8:decode'> Обновить скрипт\t'  then 
+				elseif dialogLine[list + 1] == u8:decode'> Обновить скрипт\t'  then
+					interface = false
 					update()
 					ShowDialog(1)
 				else
