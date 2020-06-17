@@ -207,6 +207,7 @@ function main()
 	ini2 = inicfg.load(LarekMoney, directIni2)
 	ini3 = inicfg.load(LarekTime, directIni3)
 	
+	checkUpdates()
 	sampAddChatMessage(u8:decode" [Larek] Успешно загрузился!", main_color)
 	
 	imgui.ApplyCustomStyle()
@@ -1741,6 +1742,28 @@ end
 function Calibration()
 	CalibrationA = true
 	sampSendChat("/time")
+end
+
+function checkUpdates()
+  local fpath = os.tmpname()
+  if doesFileExist(fpath) then os.remove(fpath) end
+  downloadUrlToFile("https://raw.githubusercontent.com/Vlaek/Larek/master/Larek.lua", fpath, function(_, status, _, _)
+    if status == 58 then
+      if doesFileExist(fpath) then
+        local file = io.open(fpath, 'r')
+        if file then
+          local info = decodeJson(file:read('*a'))
+          file:close()
+          os.remove(fpath)
+          if info['version_num'] > thisScript()['version_num'] then
+						sampAddChatMessage(u8:decode(' [Larek] Доступна новая версия скрипта')
+							script.update = true
+            return true
+          end
+        end
+      end
+    end
+  end)
 end
 
 function update()
