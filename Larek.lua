@@ -47,7 +47,7 @@ local Magaz14 = false
 local Magaz15 = false
 local Magaz16 = false
 
-local timerMagaz = {"Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", "Неизвестно", }
+local timerMagaz = {u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ", }
 
 local oneHour = 3600
 local ServerHour = 0
@@ -103,22 +103,22 @@ function main()
 	if ini[LarekName] == nil then
 		ini = inicfg.load({
 			[LarekName] = {
-				Name1  = "Деревня 1",
-				Name2  = "Деревня 2",
-				Name3  = "Вайнвуд",
-				Name4  = "Гетто",
-				Name5  = "Чиллиад",
-				Name6  = "Квартиры СФ",
-				Name7  = "СФ Топ",
-				Name8  = "Около фермы",
-				Name9  = "СФа",
-				Name10 = "СФ Бот",
-				Name11 = "Форт Карсон",
-				Name12 = "СТО ЛВ",
-				Name13 = "ЛВПД",
-				Name14 = "МО ЛВ",
-				Name15 = "ЛВ Ньюс",
-				Name16 = "АММО ЛВ"
+				Name1  = u8:decode"Р”РµСЂРµРІРЅСЏ 1",
+				Name2  = u8:decode"Р”РµСЂРµРІРЅСЏ 2",
+				Name3  = u8:decode"Р’Р°Р№РЅРІСѓРґ",
+				Name4  = u8:decode"Р“РµС‚С‚Рѕ",
+				Name5  = u8:decode"Р§РёР»Р»РёР°Рґ",
+				Name6  = u8:decode"РљРІР°СЂС‚РёСЂС‹ РЎР¤",
+				Name7  = u8:decode"РЎР¤ РўРѕРї",
+				Name8  = u8:decode"РћРєРѕР»Рѕ С„РµСЂРјС‹",
+				Name9  = u8:decode"РЎР¤Р°",
+				Name10 = u8:decode"РЎР¤ Р‘РѕС‚",
+				Name11 = u8:decode"Р¤РѕСЂС‚ РљР°СЂСЃРѕРЅ",
+				Name12 = u8:decode"РЎРўРћ Р›Р’",
+				Name13 = u8:decode"Р›Р’РџР”",
+				Name14 = u8:decode"РњРћ Р›Р’",
+				Name15 = u8:decode"Р›Р’ РќСЊСЋСЃ",
+				Name16 = u8:decode"РђРњРњРћ Р›Р’"
 			}
 		}, directIni)
 		inicfg.save(ini, directIni)
@@ -126,7 +126,7 @@ function main()
 	
 	LarekConfig = string.format('LarekConfig')
 	if ini[LarekConfig] == nil then
-		sampAddChatMessage(" [Larek] Откалибруйте время в /larek", main_color)
+		sampAddChatMessage(u8:decode" [Larek] РћС‚РєР°Р»РёР±СЂСѓР№С‚Рµ РІСЂРµРјСЏ РІ /larek", main_color)
 		ini = inicfg.load({
 			[LarekConfig] = {
 				time = tonumber(0),
@@ -156,22 +156,22 @@ function main()
 	if ini3[LarekTime] == nil then
 		ini3 = inicfg.load({
 			[LarekTime] = {
-				time1 =  "Неизвестно",
-				time2 =  "Неизвестно",
-				time3 =  "Неизвестно",
-				time4 =  "Неизвестно",
-				time5 =  "Неизвестно",
-				time6 =  "Неизвестно",
-				time7 =  "Неизвестно",
-				time8 =  "Неизвестно",
-				time9 =  "Неизвестно",
-				time10 = "Неизвестно",
-				time11 = "Неизвестно",
-				time12 = "Неизвестно",
-				time13 = "Неизвестно",
-				time14 = "Неизвестно",
-				time15 = "Неизвестно",
-				time16 = "Неизвестно"
+				time1 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time2 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time3 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time4 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time5 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time6 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time7 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time8 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time9 =  u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time10 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time11 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time12 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time13 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time14 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time15 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ",
+				time16 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 			}
 		}, directIni3)
 		inicfg.save(ini3, directIni3)
@@ -207,7 +207,7 @@ function main()
 	ini2 = inicfg.load(LarekMoney, directIni2)
 	ini3 = inicfg.load(LarekTime, directIni3)
 	
-	sampAddChatMessage(" [Larek] Успешно загрузился!", main_color)
+	sampAddChatMessage(u8:decode" [Larek] РЈСЃРїРµС€РЅРѕ Р·Р°РіСЂСѓР·РёР»СЃСЏ!", main_color)
 	
 	imgui.ApplyCustomStyle()
 	imgui.Process = true
@@ -260,7 +260,7 @@ function main()
 		
 		local caption = sampGetDialogCaption()
 		local result, button, list, input = sampHasDialogRespond(1488)
-		if caption == 'Larek: Список' then
+		if caption == u8:decode'Larek: РЎРїРёСЃРѕРє' then
 			if result and button == 1 then
 				if dialogLine[list + 1]     ==  '  1. ' .. ini[LarekName].Name1  .. '\t' .. color[1]  .. ini3[LarekTime].time1 then
 					ShowDialog(3, dialogTextToList[list + 1], input, false, 'config', 'MagazName1')
@@ -297,15 +297,15 @@ function main()
 				elseif dialogLine[list + 1] == '> Larek HUD\t' .. (interface and '{06940f}ON' or '{d10000}OFF') then
 					interface = not interface
 					ShowDialog(1)
-				elseif dialogLine[list + 1] == '> Фиксация HUDa\t' .. (InterfacePosition and '{06940f}ON' or '{d10000}OFF') then
+				elseif dialogLine[list + 1] == u8:decode'> Р¤РёРєСЃР°С†РёСЏ HUDa\t' .. (InterfacePosition and '{06940f}ON' or '{d10000}OFF') then
 					InterfacePosition = not InterfacePosition
 					inicfg.save(ini, directIni)
 					ShowDialog(1)
-				elseif dialogLine[list + 1] == '> Разница во времени с Samp-RP\t'  then
+				elseif dialogLine[list + 1] == u8:decode'> Р Р°Р·РЅРёС†Р° РІРѕ РІСЂРµРјРµРЅРё СЃ Samp-RP\t'  then
 					Calibration()
 					ShowDialog(1)
-					sampAddChatMessage(" [Larek] Время успешно откалибровано", main_color)
-				elseif dialogLine[list + 1] == '> Статистика\t'  then
+					sampAddChatMessage(u8:decode" [Larek] Р’СЂРµРјСЏ СѓСЃРїРµС€РЅРѕ РѕС‚РєР°Р»РёР±СЂРѕРІР°РЅРѕ", main_color)
+				elseif dialogLine[list + 1] == u8:decode'> РЎС‚Р°С‚РёСЃС‚РёРєР°\t'  then
 					ShowDialog(19)
 				else
 					ShowDialog(1)
@@ -313,12 +313,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1490)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name1 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -326,12 +326,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1491)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name2 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -339,12 +339,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1492)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name3 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -352,12 +352,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1493)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name4 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -365,12 +365,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1494)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name5 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -378,12 +378,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1495)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name6 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -391,12 +391,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1496)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name7 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -404,12 +404,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1497)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name8 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -417,12 +417,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1498)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name9 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -430,12 +430,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1499)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name10 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -443,12 +443,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1500)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name11 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -456,12 +456,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1501)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name12 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -469,12 +469,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1502)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name13 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -482,12 +482,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1503)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name14 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -495,12 +495,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1504)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name15 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -508,12 +508,12 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1505)
-		if caption == "Изменение названия" then
+		if caption == u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ" then
 			if result then
 				if button == 1 then
 					ini[LarekName].Name16 = input
 					inicfg.save(ini, directIni)
-					sampAddChatMessage(" [Larek] Новое название: {FFFFFF}" .. input, main_color)
+					sampAddChatMessage(u8:decode" [Larek] РќРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ: {FFFFFF}" .. input, main_color)
 					ShowDialog(1)
 				else
 					ShowDialog(1)
@@ -521,7 +521,7 @@ function main()
 			end
 		end
 		local result, button, list, input = sampHasDialogRespond(1506)
-		if caption == "Статистика" then
+		if caption == u8:decode"РЎС‚Р°С‚РёСЃС‚РёРєР°" then
 			if result then
 				if button == 1 then
 					ShowDialog(19)
@@ -664,7 +664,7 @@ function imgui.OnDrawFrame()
 	ini[LarekConfig].Y = pos.y
 	inicfg.save(ini, directIni)
 	
-if ini3[LarekTime].time1 == "Неизвестно" then
+if ini3[LarekTime].time1 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[1] = "{808080}"
 	else
 		if timerM[1] == 1 then
@@ -673,7 +673,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[1] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time2 == "Неизвестно" then
+	if ini3[LarekTime].time2 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[2] = "{808080}"
 	else
 		if timerM[2] == 1 then
@@ -682,7 +682,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[2] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time3 == "Неизвестно" then
+	if ini3[LarekTime].time3 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[3] = "{808080}"
 	else
 		if timerM[3] == 1 then
@@ -691,7 +691,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[3] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time4 == "Неизвестно" then
+	if ini3[LarekTime].time4 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[4] = "{808080}"
 	else
 		if timerM[4] == 1 then
@@ -700,7 +700,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[4] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time5 == "Неизвестно" then
+	if ini3[LarekTime].time5 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[5] = "{808080}"
 	else
 		if timerM[5] == 1 then
@@ -709,7 +709,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[5] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time6 == "Неизвестно" then
+	if ini3[LarekTime].time6 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[6] = "{808080}"
 	else
 		if timerM[6] == 1 then
@@ -718,7 +718,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[6] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time7 == "Неизвестно" then
+	if ini3[LarekTime].time7 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[7] = "{808080}"
 	else
 		if timerM[7] == 1 then
@@ -727,7 +727,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[7] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time8 == "Неизвестно" then
+	if ini3[LarekTime].time8 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[8] = "{808080}"
 	else
 		if timerM[8] == 1 then
@@ -736,7 +736,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[8] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time9 == "Неизвестно" then
+	if ini3[LarekTime].time9 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[9] = "{808080}"
 	else
 		if timerM[9] == 1 then
@@ -745,7 +745,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[9] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time10 == "Неизвестно" then
+	if ini3[LarekTime].time10 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[10] = "{808080}"
 	else
 		if timerM[10] == 1 then
@@ -754,7 +754,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[10] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time11 == "Неизвестно" then
+	if ini3[LarekTime].time11 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[11] = "{808080}"
 	else
 		if timerM[11] == 1 then
@@ -763,7 +763,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[11] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time12 == "Неизвестно" then
+	if ini3[LarekTime].time12 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[12] = "{808080}"
 	else
 		if timerM[12] == 1 then
@@ -772,7 +772,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[12] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time13 == "Неизвестно" then
+	if ini3[LarekTime].time13 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[13] = "{808080}"
 	else
 		if timerM[13] == 1 then
@@ -781,7 +781,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[13] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time14 == "Неизвестно" then
+	if ini3[LarekTime].time14 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[14] = "{808080}"
 	else
 		if timerM[14] == 1 then
@@ -790,7 +790,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[14] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time15 == "Неизвестно" then
+	if ini3[LarekTime].time15 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[15] = "{808080}"
 	else
 		if timerM[15] == 1 then
@@ -799,7 +799,7 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 			color[15] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time16 == "Неизвестно" then
+	if ini3[LarekTime].time16 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[16] = "{808080}"
 	else
 		if timerM[16] == 1 then
@@ -860,13 +860,13 @@ if ini3[LarekTime].time1 == "Неизвестно" then
 	imgui.Separator()
 	--LarekMoney = string.format('LarekMoney-%s', my_name)
 	--ini = inicfg.load(LarekMoney, directIni2)
-	imgui.TextColoredRGB("Денег награблено: " .. ini2[LarekMoney].money)
-	imgui.TextColoredRGB("Магазинов ограблено: " .. ini2[LarekMoney].count)
+	imgui.TextColoredRGB(u8:decode"Р”РµРЅРµРі РЅР°РіСЂР°Р±Р»РµРЅРѕ: " .. ini2[LarekMoney].money)
+	imgui.TextColoredRGB(u8:decode"РњР°РіР°Р·РёРЅРѕРІ РѕРіСЂР°Р±Р»РµРЅРѕ: " .. ini2[LarekMoney].count)
 
 	imgui.End()
 end
 
-function Waiting()        --1000 = 1 сек
+function Waiting()        --1000 = 1 СЃРµРє
 	if timer == true then
 		wait(10000)
 		timer = false
@@ -1059,82 +1059,82 @@ end
 function Refresh()
 	if math.abs(totalSeconds - ini3[LarekSeconds].time1) > oneHour then
 		ini3[LarekSeconds].time1 = 0
-		ini3[LarekTime].time1 = "Неизвестно"
+		ini3[LarekTime].time1 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[1] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time2) > oneHour then
 		ini3[LarekSeconds].time2 = 0
-		ini3[LarekTime].time2 = "Неизвестно"
+		ini3[LarekTime].time2 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[2] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time3) > oneHour then
 		ini3[LarekSeconds].time3 = 0
-		ini3[LarekTime].time3 = "Неизвестно"
+		ini3[LarekTime].time3 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[3] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time4) > oneHour then
 		ini3[LarekSeconds].time4 = 0
-		ini3[LarekTime].time4 = "Неизвестно"
+		ini3[LarekTime].time4 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[4] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time5) > oneHour then
 		ini3[LarekSeconds].time5 = 0
-		ini3[LarekTime].time5 = "Неизвестно"
+		ini3[LarekTime].time5 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[5] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time6) > oneHour then
 		ini3[LarekSeconds].time6 = 0
-		ini3[LarekTime].time6 = "Неизвестно"
+		ini3[LarekTime].time6 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[6] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time7) > oneHour then
 		ini3[LarekSeconds].time7 = 0
-		ini3[LarekTime].time7 = "Неизвестно"
+		ini3[LarekTime].time7 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[7] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time8) > oneHour then
 		ini3[LarekSeconds].time8 = 0
-		ini3[LarekTime].time8 = "Неизвестно"
+		ini3[LarekTime].time8 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[8] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time9) > oneHour then
 		ini3[LarekSeconds].time9 = 0
-		ini3[LarekTime].time9 = "Неизвестно"
+		ini3[LarekTime].time9 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[9] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time10) > oneHour then
 		ini3[LarekSeconds].time10 = 0
-		ini3[LarekTime].time10 = "Неизвестно"
+		ini3[LarekTime].time10 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[10] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time11) > oneHour then
 		ini3[LarekSeconds].time11 = 0
-		ini3[LarekTime].time11 = "Неизвестно"
+		ini3[LarekTime].time11 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[11] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time12) > oneHour then
 		ini3[LarekSeconds].time12 = 0
-		ini3[LarekTime].time12 = "Неизвестно"
+		ini3[LarekTime].time12 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[12] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time13) > oneHour then
 		ini3[LarekSeconds].time13 = 0
-		ini3[LarekTime].time13 = "Неизвестно"
+		ini3[LarekTime].time13 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[13] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time14) > oneHour then
 		ini3[LarekSeconds].time14 = 0
-		ini3[LarekTime].time14 = "Неизвестно"
+		ini3[LarekTime].time14 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[14] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time15) > oneHour then
 		ini3[LarekSeconds].time15 = 0
-		ini3[LarekTime].time15 = "Неизвестно"
+		ini3[LarekTime].time15 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[15] = "{808080}"
 	end
 	if math.abs(totalSeconds - ini3[LarekSeconds].time16) > oneHour then
 		ini3[LarekSeconds].time16 = 0
-		ini3[LarekTime].time16 = "Неизвестно"
+		ini3[LarekTime].time16 = u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ"
 		color[16] = "{808080}"
 	end
 end
@@ -1143,7 +1143,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 	d = {}
 	d[1], d[2], d[3], d[4], d[5], d[6] = int, dtext, dinput, string_or_number, ini1, ini2
 	
-	if ini3[LarekTime].time1 == "Неизвестно" then
+	if ini3[LarekTime].time1 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[1] = "{808080}"
 	else
 		if timerM[1] == 1 then
@@ -1152,7 +1152,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[1] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time2 == "Неизвестно" then
+	if ini3[LarekTime].time2 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[2] = "{808080}"
 	else
 		if timerM[2] == 1 then
@@ -1161,7 +1161,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[2] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time3 == "Неизвестно" then
+	if ini3[LarekTime].time3 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[3] = "{808080}"
 	else
 		if timerM[3] == 1 then
@@ -1170,7 +1170,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[3] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time4 == "Неизвестно" then
+	if ini3[LarekTime].time4 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[4] = "{808080}"
 	else
 		if timerM[4] == 1 then
@@ -1179,7 +1179,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[4] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time5 == "Неизвестно" then
+	if ini3[LarekTime].time5 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[5] = "{808080}"
 	else
 		if timerM[5] == 1 then
@@ -1188,7 +1188,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[5] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time6 == "Неизвестно" then
+	if ini3[LarekTime].time6 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[6] = "{808080}"
 	else
 		if timerM[6] == 1 then
@@ -1197,7 +1197,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[6] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time7 == "Неизвестно" then
+	if ini3[LarekTime].time7 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[7] = "{808080}"
 	else
 		if timerM[7] == 1 then
@@ -1206,7 +1206,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[7] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time8 == "Неизвестно" then
+	if ini3[LarekTime].time8 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[8] = "{808080}"
 	else
 		if timerM[8] == 1 then
@@ -1215,7 +1215,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[8] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time9 == "Неизвестно" then
+	if ini3[LarekTime].time9 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[9] = "{808080}"
 	else
 		if timerM[9] == 1 then
@@ -1224,7 +1224,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[9] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time10 == "Неизвестно" then
+	if ini3[LarekTime].time10 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[10] = "{808080}"
 	else
 		if timerM[10] == 1 then
@@ -1233,7 +1233,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[10] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time11 == "Неизвестно" then
+	if ini3[LarekTime].time11 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[11] = "{808080}"
 	else
 		if timerM[11] == 1 then
@@ -1242,7 +1242,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[11] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time12 == "Неизвестно" then
+	if ini3[LarekTime].time12 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[12] = "{808080}"
 	else
 		if timerM[12] == 1 then
@@ -1251,7 +1251,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[12] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time13 == "Неизвестно" then
+	if ini3[LarekTime].time13 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[13] = "{808080}"
 	else
 		if timerM[13] == 1 then
@@ -1260,7 +1260,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[13] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time14 == "Неизвестно" then
+	if ini3[LarekTime].time14 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[14] = "{808080}"
 	else
 		if timerM[14] == 1 then
@@ -1269,7 +1269,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[14] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time15 == "Неизвестно" then
+	if ini3[LarekTime].time15 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[15] = "{808080}"
 	else
 		if timerM[15] == 1 then
@@ -1278,7 +1278,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 			color[15] = "{06940f}"
 		end
 	end
-	if ini3[LarekTime].time16 == "Неизвестно" then
+	if ini3[LarekTime].time16 == u8:decode"РќРµРёР·РІРµСЃС‚РЅРѕ" then
 		color[16] = "{808080}"
 	else
 		if timerM[16] == 1 then
@@ -1305,145 +1305,145 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 		dialogLine[#dialogLine + 1] = ' 14. ' .. ini[LarekName].Name14 .. '\t' .. color[14] .. ini3[LarekTime].time14
 		dialogLine[#dialogLine + 1] = ' 15. ' .. ini[LarekName].Name15 .. '\t' .. color[15] .. ini3[LarekTime].time15
 		dialogLine[#dialogLine + 1] = ' 16. ' .. ini[LarekName].Name16 .. '\t' .. color[16] .. ini3[LarekTime].time16
-		dialogLine[#dialogLine + 1] = '> Larek HUD\t' .. (interface and '{06940f}ON' or '{d10000}OFF')
-		dialogLine[#dialogLine + 1] = '> Фиксация HUDa\t' .. (InterfacePosition and '{06940f}ON' or '{d10000}OFF')
-		dialogLine[#dialogLine + 1] = '> Разница во времени с Samp-RP\t'
-		dialogLine[#dialogLine + 1] = '> Статистика\t'
+		dialogLine[#dialogLine + 1] = u8:decode'> Larek HUD\t' .. (interface and '{06940f}ON' or '{d10000}OFF')
+		dialogLine[#dialogLine + 1] = u8:decode'> Р¤РёРєСЃР°С†РёСЏ HUDa\t' .. (InterfacePosition and '{06940f}ON' or '{d10000}OFF')
+		dialogLine[#dialogLine + 1] = u8:decode'> Р Р°Р·РЅРёС†Р° РІРѕ РІСЂРµРјРµРЅРё СЃ Samp-RP\t'
+		dialogLine[#dialogLine + 1] = u8:decode'> РЎС‚Р°С‚РёСЃС‚РёРєР°\t'
 		
 		local text = ""
 		for k,v in pairs(dialogLine) do
 			text = text..v.."\n"
 		end
-		sampShowDialog(1488, 'Larek: Список', text, "Выбрать", "Выход", 4)
+		sampShowDialog(1488, u8:decode'Larek: РЎРїРёСЃРѕРє', text, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"Р’С‹С…РѕРґ", 4)
 	end
 	if int == 3 then
-		sampShowDialog(1490, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1490, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 4 then
-		sampShowDialog(1491, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1491, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 5 then
-		sampShowDialog(1492, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1492, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 6 then
-		sampShowDialog(1493, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1493, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 7 then
-		sampShowDialog(1494, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1494, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 8 then
-		sampShowDialog(1495, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1495, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 9 then
-		sampShowDialog(1496, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1496, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 10 then
-		sampShowDialog(1497, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1497, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 11 then
-		sampShowDialog(1498, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1498, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 12 then
-		sampShowDialog(1499, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1499, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 13 then
-		sampShowDialog(1500, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1500, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 14 then
-		sampShowDialog(1501, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1501, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 15 then
-		sampShowDialog(1502, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1502, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 16 then
-		sampShowDialog(1503, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1503, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 17 then
-		sampShowDialog(1504, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1504, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 18 then
-		sampShowDialog(1505, "Изменение названия", dtext, "Выбрать", "Назад", 1)
+		sampShowDialog(1505, u8:decode"РР·РјРµРЅРµРЅРёРµ РЅР°Р·РІР°РЅРёСЏ", dtext, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"РќР°Р·Р°Рґ", 1)
 	end
 	if int == 19 then
 		LarekMoney = string.format('LarekMoney-%s', my_name)
 		ini2 = inicfg.load(LarekMoney, directIni2)
-		sampShowDialog(1506, 'Статистика', "Денег награблено: \t" .. ini2[LarekMoney].money .. "\nМагазинов ограблено: \t" .. ini2[LarekMoney].count
-		.. "\nОграблений в 2: \t" .. ini2[LarekMoney].count2 .. "\nОграблений в 3: \t" .. ini2[LarekMoney].count3 .. "\nОграблений в 4: \t" .. ini2[LarekMoney].count4 .. "\nОграблений в 1: \t" .. ini2[LarekMoney].count1, "Выбрать", "Выход", 4)
+		sampShowDialog(1506, u8:decode'РЎС‚Р°С‚РёСЃС‚РёРєР°', u8:decode"Р”РµРЅРµРі РЅР°РіСЂР°Р±Р»РµРЅРѕ: \t" .. ini2[LarekMoney].money .. u8:decode"\nРњР°РіР°Р·РёРЅРѕРІ РѕРіСЂР°Р±Р»РµРЅРѕ: \t" .. ini2[LarekMoney].count
+		.. u8:decode"\nРћРіСЂР°Р±Р»РµРЅРёР№ РІ 2: \t" .. ini2[LarekMoney].count2 .. u8:decode"\nРћРіСЂР°Р±Р»РµРЅРёР№ РІ 3: \t" .. ini2[LarekMoney].count3 .. u8:decode"\nРћРіСЂР°Р±Р»РµРЅРёР№ РІ 4: \t" .. ini2[LarekMoney].count4 .. u8:decode"\nРћРіСЂР°Р±Р»РµРЅРёР№ РІ 1: \t" .. ini2[LarekMoney].count1, u8:decode"Р’С‹Р±СЂР°С‚СЊ", u8:decode"Р’С‹С…РѕРґ", 4)
 	end
 end
 
 function MagazTimeFunction()
 	if MagazTime[1] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name1 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name1 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[1] = false
 	end
 	if MagazTime[2] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name2 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name2 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[2] = false
 	end
 	if MagazTime[3] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name3 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name3 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[3] = false
 	end
 	if MagazTime[4] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name4 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name4 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[4] = false
 	end
 	if MagazTime[5] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name5 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name5 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[5] = false
 	end
 	if MagazTime[6] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name6 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name6 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[6] = false
 	end
 	if MagazTime[7] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name7 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name7 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[7] = false
 	end
 	if MagazTime[8] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name8 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name8 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[8] = false
 	end
 	if MagazTime[9] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name9 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name9 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[9] = false
 	end
 	if MagazTime[10] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name10 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name10 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[10] = false
 	end
 	if MagazTime[11] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name11 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name11 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[11] = false
 	end
 	if MagazTime[12] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name12 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name12 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[12] = false
 	end
 	if MagazTime[13] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name13 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name13 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[13] = false
 	end
 	if MagazTime[14] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name14 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name14 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[14] = false
 	end
 	if MagazTime[15] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name15 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name15 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[15] = false
 	end
 	if MagazTime[16] == true then
-		sampAddChatMessage(" [Larek] Ларёк {FFFFFF}" .. ini[LarekName].Name16 .. " {FF0000}снова доступен для ограбления!", main_color)
+		sampAddChatMessage(u8:decode" [Larek] Р›Р°СЂС‘Рє {FFFFFF}" .. ini[LarekName].Name16 .. u8:decode" {FF0000}СЃРЅРѕРІР° РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РѕРіСЂР°Р±Р»РµРЅРёСЏ!", main_color)
 		MagazTime[16] = false
 	end
 end
 
 function sampev.onSendPickedUpPickup(pickupId)
-	if pickupId == 1039 then  -- вошел
+	if pickupId == 1039 then  -- РІРѕС€РµР»
 		Magaz1 = true
 	end
-	if pickupId == 1040 or pickupId == 1037 or pickupId == 979 or pickupId == 977 or pickupId == 983 or pickupId == 1035 or pickupId == 987 or pickupId == 981 or pickupId == 985 or pickupId == 1033 or pickupId == 1031 or pickupId == 1019 or pickupId == 1025 or pickupId == 1021 or pickupId == 1023 or pickupId == 1029 then  -- вышел
+	if pickupId == 1040 or pickupId == 1037 or pickupId == 979 or pickupId == 977 or pickupId == 983 or pickupId == 1035 or pickupId == 987 or pickupId == 981 or pickupId == 985 or pickupId == 1033 or pickupId == 1031 or pickupId == 1019 or pickupId == 1025 or pickupId == 1021 or pickupId == 1023 or pickupId == 1029 then  -- РІС‹С€РµР»
 		Magaz1 = false
 	end
 	if pickupId == 1037 then  
@@ -1540,161 +1540,161 @@ end
 
 function sampev.onServerMessage(color, text)
 	if Magaz1 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[1] =  string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[1] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time1 = timerMagaz[1]
 				inicfg.save(ini3, directIni3)
-			hourM[1], minuteM[1], secondM[1] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[1], minuteM[1], secondM[1] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time1 = hourM[1] * 3600 + minuteM[1] * 60 + secondM[1]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz2 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[2] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[2] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time2 = timerMagaz[2]
 				inicfg.save(ini3, directIni3)
-			hourM[2], minuteM[2], secondM[2] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[2], minuteM[2], secondM[2] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time2 = hourM[2] * 3600 + minuteM[2] * 60 + secondM[2]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz3 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[3] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[3] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time3 = timerMagaz[3]
 				inicfg.save(ini3, directIni3)
-			hourM[3], minuteM[3], secondM[3] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[3], minuteM[3], secondM[3] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time3 = hourM[3] * 3600 + minuteM[3] * 60 + secondM[3]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz4 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[4] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[4] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time4 = timerMagaz[4]
 				inicfg.save(ini3, directIni3)
-			hourM[4], minuteM[4], secondM[4] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[4], minuteM[4], secondM[4] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time4 = hourM[4] * 3600 + minuteM[4] * 60 + secondM[4]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz5 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[5] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[5] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time5 = timerMagaz[5]
 				inicfg.save(ini3, directIni3)
-			hourM[5], minuteM[5], secondM[5] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[5], minuteM[5], secondM[5] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time5 = hourM[5] * 3600 + minuteM[5] * 60 + secondM[5]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz6 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[6] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[6] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time6 = timerMagaz[6]
 				inicfg.save(ini3, directIni3)
-			hourM[6], minuteM[6], secondM[6] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[6], minuteM[6], secondM[6] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time6 = hourM[6] * 3600 + minuteM[6] * 60 + secondM[6]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz7 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[7] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[7] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time7 = timerMagaz[7]
 				inicfg.save(ini3, directIni3)
-			hourM[7], minuteM[7], secondM[7] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[7], minuteM[7], secondM[7] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time7 = hourM[7] * 3600 + minuteM[7] * 60 + secondM[7]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz8 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[8] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[8] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time8 = timerMagaz[8]
 				inicfg.save(ini3, directIni3)
-			hourM[8], minuteM[8], secondM[8] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[8], minuteM[8], secondM[8] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time8 = hourM[8] * 3600 + minuteM[8] * 60 + secondM[8]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz9 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[9] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[9] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time9 = timerMagaz[9]
 				inicfg.save(ini3, directIni3)
-			hourM[9], minuteM[9], secondM[9] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[9], minuteM[9], secondM[9] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time9 = hourM[9] * 3600 + minuteM[9] * 60 + secondM[9]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz10 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[10] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[10] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time10 = timerMagaz[10]
 				inicfg.save(ini3, directIni3)
-			hourM[10], minuteM[10], secondM[10] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[10], minuteM[10], secondM[10] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time10 = hourM[10] * 3600 + minuteM[10] * 60 + secondM[10]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz11 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[11] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[11] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time11 = timerMagaz[11]
 				inicfg.save(ini3, directIni3)
-			hourM[11], minuteM[11], secondM[11] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[11], minuteM[11], secondM[11] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time11 = hourM[11] * 3600 + minuteM[11] * 60 + secondM[11]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz12 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[12] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[12] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time12 = timerMagaz[12]
 				inicfg.save(ini3, directIni3)
-			hourM[12], minuteM[12], secondM[12] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[12], minuteM[12], secondM[12] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time12 = hourM[12] * 3600 + minuteM[12] * 60 + secondM[12]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz13 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[13] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[13] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time13 = timerMagaz[13]
 				inicfg.save(ini3, directIni3)
-			hourM[13], minuteM[13], secondM[13] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[13], minuteM[13], secondM[13] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time13 = hourM[13] * 3600 + minuteM[13] * 60 + secondM[13]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz14 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[14] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[14] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time14 = timerMagaz[14]
 				inicfg.save(ini3, directIni3)
-			hourM[14], minuteM[14], secondM[14] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[14], minuteM[14], secondM[14] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time14 = hourM[14] * 3600 + minuteM[14] * 60 + secondM[14]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz15 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[15] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[15] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time15 = timerMagaz[15]
 				inicfg.save(ini3, directIni3)
-			hourM[15], minuteM[15], secondM[15] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[15], minuteM[15], secondM[15] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time15 = hourM[15] * 3600 + minuteM[15] * 60 + secondM[15]
 			inicfg.save(ini3, directIni3)
 		end
 	end
 	if Magaz16 == true then
-		if string.find(text, " Следующее ограбление будет доступно в .+") then
-			timerMagaz[16] = string.match(text, " Следующее ограбление будет доступно в (.+)")
+		if string.find(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ .+") then
+			timerMagaz[16] = string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (.+)")
 				ini3[LarekTime].time16 = timerMagaz[16]
 				inicfg.save(ini3, directIni3)
-			hourM[16], minuteM[16], secondM[16] =  string.match(text, " Следующее ограбление будет доступно в (%d+)[^%d]+(%d+)[^%d]+(%d+)")
+			hourM[16], minuteM[16], secondM[16] =  string.match(text, u8:decode" РЎР»РµРґСѓСЋС‰РµРµ РѕРіСЂР°Р±Р»РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РІ (%d+)[^%d]+(%d+)[^%d]+(%d+)")
 			ini3[LarekSeconds].time16 = hourM[16] * 3600 + minuteM[16] * 60 + secondM[16]
 			inicfg.save(ini3, directIni3)
 		end
@@ -1744,7 +1744,7 @@ end
 function update()
   downloadUrlToFile("https://raw.githubusercontent.com/21se/Taximate/master/taximate.lua", thisScript().path, function(_, status, _, _)
     if status == 6 then
-			sampAddChatMessage(' [Larek] {FFFFFF}Скрипт обновлён', main_color)
+			sampAddChatMessage(u8:decode' [Larek] {FFFFFF}РЎРєСЂРёРїС‚ РѕР±РЅРѕРІР»С‘РЅ', main_color)
       thisScript():reload()
     end
   end)
