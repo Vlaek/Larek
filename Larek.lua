@@ -310,7 +310,7 @@ function main()
 				elseif dialogLine[list + 1] == u8:decode'> Обновить скрипт\t'  then
 					interface = false
 					update()
-					ShowDialog(1)
+					--ShowDialog(1)
 				else
 					ShowDialog(1)
 				end
