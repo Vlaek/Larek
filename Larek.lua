@@ -1705,29 +1705,31 @@ function sampev.onServerMessage(color, text)
 end
 
 function sampev.onDisplayGameText(style, time, text)
-	if string.find(text, "$5000") then
-		ini2[LarekMoney].money  = ini2[LarekMoney].money + 5000
-		ini2[LarekMoney].count  = ini2[LarekMoney].count + 1
-		ini2[LarekMoney].count2 = ini2[LarekMoney].count2 + 1
-		inicfg.save(ini2, directIni2)
-	end
-	if string.find(text, "$3333") then
-		ini2[LarekMoney].money  = ini2[LarekMoney].money + 3333
-		ini2[LarekMoney].count  = ini2[LarekMoney].count + 1
-		ini2[LarekMoney].count3 = ini2[LarekMoney].count3 + 1
-		inicfg.save(ini2, directIni2)
-	end
-	if string.find(text, "$2500") then
-		ini2[LarekMoney].money  = ini2[LarekMoney].money + 2500
-		ini2[LarekMoney].count  = ini2[LarekMoney].count + 1
-		ini2[LarekMoney].count4 = ini2[LarekMoney].count4 + 1
-		inicfg.save(ini2, directIni2)
-	end
-	if string.find(text, "$10000") then
-		ini2[LarekMoney].money  = ini2[LarekMoney].money + 10000
-		ini2[LarekMoney].count  = ini2[LarekMoney].count + 1
-		ini2[LarekMoney].count1 = ini2[LarekMoney].count1 + 1
-		iinicfg.save(ini2, directIni2)
+	if Magaz1 == true or Magaz2 == true or Magaz3 == true or Magaz4 == true or Magaz5 == true or Magaz6 == true or Magaz7 == true or Magaz8 == true or Magaz9 == true or Magaz10 == true or Magaz11 == true or Magaz12 == true or Magaz13 == true or Magaz14 == true or Magaz15 == true or Magaz16 == true then 
+		if string.find(text, "$5000") then
+			ini2[LarekMoney].money  = ini2[LarekMoney].money + 5000
+			ini2[LarekMoney].count  = ini2[LarekMoney].count + 1
+			ini2[LarekMoney].count2 = ini2[LarekMoney].count2 + 1
+			inicfg.save(ini2, directIni2)
+		end
+		if string.find(text, "$3333") then
+			ini2[LarekMoney].money  = ini2[LarekMoney].money + 3333
+			ini2[LarekMoney].count  = ini2[LarekMoney].count + 1
+			ini2[LarekMoney].count3 = ini2[LarekMoney].count3 + 1
+			inicfg.save(ini2, directIni2)
+		end
+		if string.find(text, "$2500") then
+			ini2[LarekMoney].money  = ini2[LarekMoney].money + 2500
+			ini2[LarekMoney].count  = ini2[LarekMoney].count + 1
+			ini2[LarekMoney].count4 = ini2[LarekMoney].count4 + 1
+			inicfg.save(ini2, directIni2)
+		end
+		if string.find(text, "$10000") then
+			ini2[LarekMoney].money  = ini2[LarekMoney].money + 10000
+			ini2[LarekMoney].count  = ini2[LarekMoney].count + 1
+			ini2[LarekMoney].count1 = ini2[LarekMoney].count1 + 1
+			iinicfg.save(ini2, directIni2)
+		end
 	end
 	if CalibrationA == true then
 		if string.find(text, "%d:%d") then
