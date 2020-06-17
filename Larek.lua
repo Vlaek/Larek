@@ -307,6 +307,9 @@ function main()
 					sampAddChatMessage(u8:decode" [Larek] Время успешно откалибровано", main_color)
 				elseif dialogLine[list + 1] == u8:decode'> Статистика\t'  then
 					ShowDialog(19)
+				elseif dialogLine[list + 1] == u8:decode'> Обновить скрипт\t'  then 
+					update()
+					ShowDialog(1)
 				else
 					ShowDialog(1)
 				end
@@ -858,8 +861,6 @@ if ini3[LarekTime].time1 == u8:decode"Неизвестно" then
 		imgui.SameLine((resX/5) / 3)
 	imgui.TextColoredRGB(u8"" .. color[16] .. ini3[LarekTime].time16)	
 	imgui.Separator()
-	--LarekMoney = string.format('LarekMoney-%s', my_name)
-	--ini = inicfg.load(LarekMoney, directIni2)
 	imgui.TextColoredRGB(u8:decode"Денег награблено: " .. ini2[LarekMoney].money)
 	imgui.TextColoredRGB(u8:decode"Магазинов ограблено: " .. ini2[LarekMoney].count)
 
@@ -1309,6 +1310,7 @@ function ShowDialog(int, dtext, dinput, string_or_number, ini1, ini2)
 		dialogLine[#dialogLine + 1] = u8:decode'> Фиксация HUDa\t' .. (InterfacePosition and '{06940f}ON' or '{d10000}OFF')
 		dialogLine[#dialogLine + 1] = u8:decode'> Разница во времени с Samp-RP\t'
 		dialogLine[#dialogLine + 1] = u8:decode'> Статистика\t'
+		dialogLine[#dialogLine + 1] = u8:decode'> Обновить скрипт\t'
 		
 		local text = ""
 		for k,v in pairs(dialogLine) do
@@ -1742,9 +1744,9 @@ function Calibration()
 end
 
 function update()
-  downloadUrlToFile("https://raw.githubusercontent.com/21se/Taximate/master/taximate.lua", thisScript().path, function(_, status, _, _)
+  downloadUrlToFile("https://raw.githubusercontent.com/Vlaek/Larek/master/Larek.lua", thisScript().path, function(_, status, _, _)
     if status == 6 then
-			sampAddChatMessage(u8:decode' [Larek] {FFFFFF}Скрипт обновлён', main_color)
+			sampAddChatMessage(u8:decode' [Larek] Скрипт обновлён', main_color)
       thisScript():reload()
     end
   end)
