@@ -1,7 +1,7 @@
 script_name("Larek")
 script_author("Vlaek")
 script_version('17/06/2020')
-script_version_number(0)
+script_version_number(1)
 script_url("https://vlaek.github.io/Larek/")
 script.update = false
 
