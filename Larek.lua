@@ -1,7 +1,7 @@
 script_name("Larek")
 script_author("Vlaek")
 script_version('17/06/2020')
-script_version_number(1)
+script_version_number(0)
 script_url("https://vlaek.github.io/Larek/")
 script.update = false
 
@@ -1747,7 +1747,7 @@ end
 function checkUpdates()
   local fpath = os.tmpname()
   if doesFileExist(fpath) then os.remove(fpath) end
-  downloadUrlToFile("https://raw.githubusercontent.com/Vlaek/Larek/master/Larek.lua", fpath, function(_, status, _, _)
+  downloadUrlToFile("https://raw.githubusercontent.com/Vlaek/Larek/master/version.json", fpath, function(_, status, _, _)
     if status == 58 then
       if doesFileExist(fpath) then
         local file = io.open(fpath, 'r')
@@ -1756,7 +1756,7 @@ function checkUpdates()
           file:close()
           os.remove(fpath)
           if info['version_num'] > thisScript()['version_num'] then
-						sampAddChatMessage(u8:decode(' [Larek] Доступна новая версия скрипта')
+						sampAddChatMessage(u8:decode' [Larek] Доступна новая версия скрипта!', main_color)
 							script.update = true
             return true
           end
